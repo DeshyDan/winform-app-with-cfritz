@@ -16,10 +16,18 @@ namespace winform_app_with_cfritz
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void NumberButton_Click (object sender , EventArgs r)
         {
-            
+            var button = sender as Button;
+            if (CalculatorScreen.Text == "0.")
+            {
+                CalculatorScreen.Text = button.Text;
+            }
+            else
+            {
+                CalculatorScreen.Text += button.Text;
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -27,7 +35,7 @@ namespace winform_app_with_cfritz
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e)
         {
 
         }
